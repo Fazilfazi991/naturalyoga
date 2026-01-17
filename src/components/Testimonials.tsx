@@ -1,4 +1,5 @@
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Testimonials: React.FC = () => {
     const testimonials = [
@@ -7,10 +8,12 @@ const Testimonials: React.FC = () => {
         { name: 'Elena R.', text: "The healing sessions have been transformative for my stress levels. Highly recommend the sound baths!", role: 'Wellness Enthusiast' },
     ];
 
+    const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
     return (
         <section className="section" style={{ backgroundColor: 'var(--bg-primary)' }}>
-            <div className="container">
-                <h2 className="animate-fade-up" style={{ textAlign: 'center', marginBottom: '3rem' }}>Member Stories</h2>
+            <div ref={ref} className="container" style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.6s ease' }}>
+                <h2 className={isVisible ? 'animate-fade-up' : ''} style={{ textAlign: 'center', marginBottom: '3rem' }}>Member Stories</h2>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                     {testimonials.map((t, index) => (
                         <div key={index} className={`animate-fade-up delay-${(index + 1) * 100}`} style={{

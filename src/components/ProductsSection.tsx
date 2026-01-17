@@ -1,4 +1,5 @@
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const ProductsSection: React.FC = () => {
     const products = [
@@ -8,10 +9,12 @@ const ProductsSection: React.FC = () => {
         { name: 'Meditation Cushion', price: 'AED 150', image: '/product-cushion.png' },
     ];
 
+    const { ref, isVisible } = useScrollAnimation({ threshold: 0.15 });
+
     return (
         <section id="products" className="section" style={{ backgroundColor: 'var(--bg-light-green)' }}>
-            <div className="container">
-                <h2 className="animate-fade-up" style={{ textAlign: 'center', marginBottom: '3rem' }}>Yoga Products</h2>
+            <div ref={ref} className="container" style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.6s ease' }}>
+                <h2 className={isVisible ? 'animate-fade-up' : ''} style={{ textAlign: 'center', marginBottom: '3rem' }}>Yoga Products</h2>
                 <p className="animate-fade-up delay-100" style={{ textAlign: 'center', marginBottom: '3rem', marginTop: '-2rem', color: 'var(--text-secondary)' }}>
                     Enhance your practice with our curated selection of high-quality essentials.
                 </p>

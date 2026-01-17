@@ -1,9 +1,12 @@
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About: React.FC = () => {
+    const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
     return (
         <section id="about" className="section" style={{ backgroundColor: 'var(--bg-primary)', padding: '4rem 0' }}>
-            <div className="container animate-fade-up" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1rem' }}>
+            <div ref={ref} className={`container ${isVisible ? 'animate-fade-up' : ''}`} style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1rem', opacity: isVisible ? 1 : 0 }}>
 
                 {/* Row 1: Text Left, Image Right */}
                 <div className="about-grid">
