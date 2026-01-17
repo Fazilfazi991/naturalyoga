@@ -10,8 +10,12 @@ const Header: React.FC = () => {
 
                 <nav className="header-nav" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
                     <a href="#about" style={{ fontWeight: 600 }}>About</a>
-                    <a href="#classes" style={{ fontWeight: 600 }}>Classes</a>
-                    <a href="#promo" style={{ fontWeight: 600 }}>Offers</a>
+                    <a href="#mind" style={{ fontWeight: 600 }}>Mind</a>
+                    <a href="#body" style={{ fontWeight: 600 }}>Body</a>
+                    <a href="#soul" style={{ fontWeight: 600 }}>Soul</a>
+                    <a href="#offers" style={{ fontWeight: 600 }}>Offers</a>
+                    <a href="#contact" style={{ fontWeight: 600 }}>Contact</a>
+                    <a href="#team" style={{ fontWeight: 600 }}>Team</a>
 
                     <a
                         href="https://wa.me/971562050833"
