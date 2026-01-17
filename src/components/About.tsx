@@ -1,32 +1,78 @@
-```
 import React from 'react';
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="section" style={{ backgroundColor: 'var(--bg-primary)' }}>
-            <div className="container animate-fade-up" style={{ textAlign: 'center', maxWidth: '800px' }}>
-                <h2>Yoga for Every-Body at Nature Universal</h2>
-                <p style={{ fontSize: '18px', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-                    Nature Universal Yoga Center believes every body holds natural wisdom to self-heal.
-                    Classical sessions ease beginners into mindful practice. Advanced Hatha Vinyasa flows
-                    build strength and awareness for deeper journeys.
-                </p>
-                <div style={{ marginTop: '2rem' }}>
-                    <img 
-                        src="/yoga-everybody.png" 
-                        alt="Yoga postures demonstrating flexibility and strength" 
-                        style={{ 
-                            maxWidth: '100%', 
-                            height: 'auto', 
-                            borderRadius: '12px',
-                            boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
-                        }} 
-                    />
+        <section id="about" className="section" style={{ backgroundColor: 'var(--bg-primary)', padding: '4rem 0' }}>
+            <div className="container animate-fade-up" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1rem' }}>
+
+                {/* Row 1: Text Left, Image Right */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    gap: '3rem',
+                    alignItems: 'center',
+                    marginBottom: '4rem'
+                }}>
+                    <div style={{ textAlign: 'left' }}>
+                        <h2 style={{
+                            fontSize: '2.5rem',
+                            lineHeight: '1.2',
+                            color: 'var(--text-primary)',
+                            marginBottom: '1rem'
+                        }}>
+                            Welcome to Nature Universal Yoga Center,<br />
+                            <span style={{ fontSize: '1.5rem', fontWeight: 'normal', color: 'var(--text-secondary)' }}>
+                                Dubai’s exquisite new holistic yoga and wellbeing community
+                            </span>
+                        </h2>
+                    </div>
+                    <div>
+                        <img
+                            src="/yoga-pose-1.png"
+                            alt="Yoga pose 1"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                borderRadius: '12px',
+                                boxShadow: '0 8px 30px rgba(0,0,0,0.08)'
+                            }}
+                        />
+                    </div>
                 </div>
+
+                {/* Row 2: Image Left, Text Right */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    gap: '3rem',
+                    alignItems: 'center'
+                }}>
+                    <div style={{ order: 1 }}> {/* On mobile this might need media query to swap order if we want image first, but auto-fit usually just wraps. 'order' needs flex/grid. With auto-fit minmax, the second child usually wraps below. To enforce "Image Top" on mobile for this row, we typically use flex-direction column-reverse or similar. For now, let's keep natural DOM order or simple grid. */}
+                        <img
+                            src="/yoga-pose-2.png"
+                            alt="Yoga pose 2"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                borderRadius: '12px',
+                                boxShadow: '0 8px 30px rgba(0,0,0,0.08)'
+                            }}
+                        />
+                    </div>
+                    <div style={{ textAlign: 'left', order: 2 }}> {/* Logic: if grid wraps, this is 2nd. */}
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                            Nature Universal Yoga Center believes every body holds natural wisdom to self-heal.
+                            Classical sessions ease beginners into mindful practice. Advanced Hatha Vinyasa flows
+                            build strength and awareness for deeper journeys.
+                            <br /><br />
+                            It’s yoga’s job to activate that tendency to build strength, awareness and harmony in Mind Body & Soul.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
     );
 };
 
 export default About;
-```

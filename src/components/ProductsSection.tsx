@@ -2,10 +2,10 @@ import React from 'react';
 
 const ProductsSection: React.FC = () => {
     const products = [
-        { name: 'Eco-Friendly Yoga Mat', price: 'AED 120', image: 'https://placehold.co/300x300/4A7C59/FFFFFF?text=Yoga+Mat' },
-        { name: 'Cork Yoga Block', price: 'AED 45', image: 'https://placehold.co/300x300/4A7C59/FFFFFF?text=Cork+Block' },
-        { name: 'Cotton Yoga Strap', price: 'AED 35', image: 'https://placehold.co/300x300/4A7C59/FFFFFF?text=Yoga+Strap' },
-        { name: 'Meditation Cushion', price: 'AED 150', image: 'https://placehold.co/300x300/4A7C59/FFFFFF?text=Cushion' },
+        { name: 'Eco-Friendly Yoga Mat', price: 'AED 120', image: '/product-yoga-mat.png' },
+        { name: 'Cork Yoga Block', price: 'AED 45', image: '/product-cork-block.png' },
+        { name: 'Cotton Yoga Strap', price: 'AED 35', image: '/product-yoga-strap.png' },
+        { name: 'Meditation Cushion', price: 'AED 150', image: '/product-cushion.png' },
     ];
 
     return (

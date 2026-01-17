@@ -9,8 +9,8 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
     return (
         <header className="header" style={{ height: 'var(--header-height)', display: 'flex', alignItems: 'center', backgroundColor: 'var(--bg-primary)', position: 'sticky', top: 0, zIndex: 100, borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-                <div className="logo" style={{ fontWeight: 700, fontSize: '24px', fontFamily: 'var(--font-primary)' }}>
-                    Nature Universal
+                <div className="logo">
+                    <img src="/logo-new.png" alt="Nature Universal Logo" style={{ height: '50px', width: 'auto' }} />
                 </div>
 
                 <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
@@ -32,9 +32,15 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
                         Switch to {theme === 'white' ? 'Green' : 'White'}
                     </button>
 
-                    <button className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '14px' }}>
+                    <a
+                        href="https://wa.me/971562050833"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary"
+                        style={{ padding: '8px 16px', fontSize: '14px', textDecoration: 'none', display: 'inline-block' }}
+                    >
                         Book Now
-                    </button>
+                    </a>
                 </nav>
             </div>
         </header>
