@@ -13,24 +13,13 @@ import Promo from './components/Promo';
 import Footer from './components/Footer';
 
 function App() {
-  const [theme, setTheme] = useState<'white' | 'green'>('white');
-
   useEffect(() => {
-    // Apply theme class to body
-    if (theme === 'green') {
-      document.body.classList.add('theme-green');
-    } else {
-      document.body.classList.remove('theme-green');
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'white' ? 'green' : 'white'));
-  };
+    document.body.classList.add('theme-green');
+  }, []);
 
   return (
     <div className="app">
-      <Header theme={theme} toggleTheme={toggleTheme} />
+      <Header />
       <main>
         <Hero />
         <About />

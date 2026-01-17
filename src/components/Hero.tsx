@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
                 <p style={{ fontSize: '20px', marginBottom: '2rem', maxWidth: '600px', marginInline: 'auto' }}>
                     Dubai's Premier Holistic Yoga Sanctuary. Your Gateway to Mind, Body & Soul Harmony.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                <div className="hero-buttons">
                     <a href="https://wa.me/971562050833" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ textDecoration: 'none' }}>Claim 2 Trial Classes - AED 108</a>
                     <a href="https://wa.me/971562050833" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ textDecoration: 'none' }}>View Classes</a>
                 </div>

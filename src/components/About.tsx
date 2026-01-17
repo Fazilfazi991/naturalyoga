@@ -6,16 +6,9 @@ const About: React.FC = () => {
             <div className="container animate-fade-up" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1rem' }}>
 
                 {/* Row 1: Text Left, Image Right */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '3rem',
-                    alignItems: 'center',
-                    marginBottom: '4rem'
-                }}>
-                    <div style={{ textAlign: 'left' }}>
+                <div className="about-grid">
+                    <div className="about-text" style={{ textAlign: 'left' }}>
                         <h2 style={{
-                            fontSize: '2.5rem',
                             lineHeight: '1.2',
                             color: 'var(--text-primary)',
                             marginBottom: '1rem'
@@ -41,12 +34,7 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Row 2: Image Left, Text Right */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '3rem',
-                    alignItems: 'center'
-                }}>
+                <div className="about-grid" style={{ marginBottom: 0 }}>
                     <div style={{ order: 1 }}> {/* On mobile this might need media query to swap order if we want image first, but auto-fit usually just wraps. 'order' needs flex/grid. With auto-fit minmax, the second child usually wraps below. To enforce "Image Top" on mobile for this row, we typically use flex-direction column-reverse or similar. For now, let's keep natural DOM order or simple grid. */}
                         <img
                             src="/yoga-pose-2.png"
