@@ -5,7 +5,7 @@ const Header: React.FC = () => {
         <header className="header" style={{ height: 'var(--header-height)', display: 'flex', alignItems: 'center', backgroundColor: 'var(--bg-primary)', position: 'sticky', top: 0, zIndex: 100, borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
             <div className="container header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
                 <div className="logo">
-                    <img src="/logo-new.png" alt="Nature Universal Logo" style={{ height: '50px', width: 'auto' }} />
+                    <img src="/logo-updated.png" alt="Nature Universal Yoga Logo" style={{ height: '70px', width: 'auto' }} />
                 </div>
 
                 <nav className="header-nav" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
