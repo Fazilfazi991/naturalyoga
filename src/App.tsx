@@ -11,6 +11,7 @@ import ProductsSection from './components/ProductsSection';
 import Testimonials from './components/Testimonials';
 import Promo from './components/Promo';
 import Footer from './components/Footer';
+import Team from './components/Team';
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Team />
         <Offerings />
         <QuoteSection />
         <ProductsSection />
